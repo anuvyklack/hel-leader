@@ -5,7 +5,7 @@
 ;; Author: Yuriy Artemyev <anuvyklack@gmail.com>
 ;; Maintainer: Yuriy Artemyev <anuvyklack@gmail.com>
 ;; Version: 2.0
-;; Homepage: https://github.com/anuvyklack/hel
+;; Homepage: https://github.com/anuvyklack/hel-leader
 ;; Package-Requires: ((emacs "29.1"))
 ;;
 ;; This file is not part of GNU Emacs.
@@ -182,7 +182,7 @@ Return the found command."
              (setq hel-leader--pending-modifier "C-M-"))
             (hel-leader--keys
              (cl-callf -snoc hel-leader--keys key))
-            ;; All following conditions assumes that `hel-leader--keys' are empty.
+            ;; All following conditions assumes that `hel-leader--keys' is empty.
             ((equal "SPC" key)
              (setq hel-leader--keys '("C-c" "C-c")
                    hel-leader--pending-modifier nil))
