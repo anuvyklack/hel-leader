@@ -40,9 +40,10 @@ A [[https://github.com/anuvyklack/hel][Hel]] extension that serves two purposes:
   Same as =SPC=, but the result buffer of the invoked command (if any) will be
   opened in a new window. Equivalent to =C-w n SPC=.
 
-- =C-h k= / =<f1> k= (~hel-leader-describe-key~) ::
-  Like =describe-key=, but correctly handles key chords entered through
-  hel-leader. If the [[https://github.com/Wilfred/helpful][Helpful]] package is loaded, uses =helpful-command= instead.
+- =<f1> k= or =C-h k= (~hel-leader-describe-key~) ::
+  Like ~describe-key~, but correctly handles key chords entered through
+  ~hel-leader~. If the [[https://github.com/Wilfred/helpful][Helpful]] package is installed, uses its ~helpful-command~
+  instead.
 
 - =Backspace= (~hel-leader-undo~) :: Undo the last entered key.
 
