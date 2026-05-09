@@ -49,11 +49,14 @@
 ;;; Keybindings
 
 (hel-keymap-global-set :state '(normal motion)
-  "SPC"      'hel-leader
-  "C-w SPC"  'hel-leader-other-window
-  "C-h k"    'hel-leader-describe-key
-  "<f1> k"   'hel-leader-describe-key
-  "<help> k" 'hel-leader-describe-key)
+  "SPC" 'hel-leader)
+
+;; "C-w SPC"
+(hel-keymap-set hel-window-map
+  "SPC" 'hel-leader-other-window)
+
+(hel-keymap-set help-map
+  "k"   'hel-leader-describe-key)
 
 ;;; Custom variables
 
