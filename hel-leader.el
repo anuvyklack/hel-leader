@@ -48,7 +48,7 @@
 
 ;;; Keybindings
 
-(hel-keymap-global-set :state '(normal motion)
+(hel-keymap-global-set :state '(normal emacs)
   "SPC" 'hel-leader)
 
 ;; "C-w SPC"
