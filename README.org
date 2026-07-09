@@ -68,3 +68,31 @@ A [[https://github.com/anuvyklack/hel][Hel]] extension that serves two purposes:
 | =SPC m x=      | =M-x=        |
 | =SPC g x=      | =C-M-x=      |
 | =SPC g S-left= | =C-M-S-left= |
+
+** Difference from the Meow Keypad (and hel-leader v1)
+
+Meow Keypad and hel-leader prior v2.0 implements the [[https://github.com/emacsorphanage/god-mode][God-Mode]] logic. 
+The difference of hel-leader v2 from God-Mode is "swapped" =C-x= behavior:
+
+- *god-mode*
+  | =SPC x=     | =C-x C-= |
+  | =SPC x SPC= | =C-x=    |
+
+- *hel-leader*
+  | =SPC x=   | =C-x=    |
+  | =SPC x x= | =C-x C-= |
+
+# - *god-mode*
+#   - =SPC x= → =C-x C-=
+#   - =SPC x SPC= → =C-x=
+# 
+# - *hel-leader*
+#   - =SPC x= → =C-x=
+#   - =SPC x x= → =C-x C-=
+
+=C-c C-= behaves the same in both *god-mode* and *hel-leader*:
+| =SPC c= | =C-c C-= |
+
+For ~save-buffer~, Hel provides the =ZZ= (like Vim) and =zx= shortcuts because
+saving the current buffer is a very common operation. Saving all buffers
+becomes on =SPC x s= (=C-x s=).
