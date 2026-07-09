@@ -1,4 +1,4 @@
-;;; hel-leader.el -*- lexical-binding: t -*-
+;;; hel-leader.el --- Leader key for Hel -*- lexical-binding: t -*-
 ;;
 ;; Copyright © 2025-2026 Yuriy Artemyev
 ;;
@@ -6,7 +6,8 @@
 ;; Maintainer: Yuriy Artemyev <anuvyklack@gmail.com>
 ;; Version: 2.0
 ;; Homepage: https://github.com/anuvyklack/hel-leader
-;; Package-Requires: ((emacs "29.1"))
+;; Package-Requires: ((emacs "29.1") (hel "0.12.0") (dash "2.19.1") (s "1.13.0"))
+;; SPDX-License-Identifier: GPL-3.0-or-later
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -127,8 +128,8 @@ Keys are strings that satisfies `key-valid-p'")
 
 (hel-define-command hel-leader-describe-key (key-list &optional buffer)
   "Wrapper around `describe-key', that correctly handle key chords entered
-with hel-leader. If Helpful package is loaded, `helpful-key' will be used instead
-of `describe-key'."
+with hel-leader. If Helpful package is loaded, `helpful-key' will be used
+instead of `describe-key'."
   :multiple-cursors nil
   (interactive (list (help--read-key-sequence)))
   (pcase (key-binding (caar key-list))
